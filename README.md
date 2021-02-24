@@ -1,7 +1,7 @@
 # Computer_Systems_Engineering
 1004557 Anirudh Shrinivason
 
-For the execution of TODO 1, 2, 3 and 5, the instructions given in the google document were followed. I was also able to pass all the neessary test cases by following the instructions given carefully. The only alteration in design is for the part of TODO 4, ie: the implementation for the revival of worker processes.
+FI followed the instructions given in the google documents thoroughly for the TODOs 1,2,3,4 b). I was also able to pass all the neessary test cases by following the instructions given carefully. The only alteration in design is for the part a) of TODO 4, ie: the implementation for the revival of worker processes.
 
 I first checked the buffer in order to assign proesses to the workers. I found whether there are any free workers available to carry forward a new process by initializing a variable called slot_is_found. This variable is initially set to 0 and is switched to 1 when a worker is found to carry a process forward. A new job is assigned under the condition that 'shmPTR_jobs_buffer[i].task_status == 0' and that it is alive. If it is dead, then we must revive it first, before assigning a job to it.The process revival by itself was implemented using fork(), similar to the function create_children(). Then, a new job is assigned to that specific process.
 
