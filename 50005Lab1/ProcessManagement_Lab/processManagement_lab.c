@@ -5,6 +5,8 @@
  * TODO#3: Modify the function to be multiprocess-safe 
  * */
 
+//Done by Anirudh Shrinivason 1004557
+
  // TASK 3 IS READY TO GO!!!
 void task(long duration)
 {
